@@ -15,6 +15,6 @@ public class DemoController {
     public String hello() {
         User user = RequestContext.get();
         log.info("Requested by {}", user);
-        return "Hello " + user.getName();
+        return String.join(" ", "Hello", user.getName());
     }
 }
